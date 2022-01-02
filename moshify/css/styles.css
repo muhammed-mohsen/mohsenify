@@ -293,11 +293,17 @@ a {
   background: var(--color-secondary);
   color: white;
 }
+.card--primary .badge--pri.card--primary {
+  background: #126de4;
+}
 .card--secondary .badge--secondary {
   background: #02cdf1;
 }
 
 /* Plans */
+.plan {
+  transition: transform 0.2s ease-out;
+}
 .plan__name {
   color: #fff;
   margin: 0;
@@ -324,6 +330,15 @@ a {
 }
 .card--popular .card__header {
   position: relative;
+}
+.card--popular {
+  transform: scale(1.1);
+}
+.plan:hover {
+  transform: scale(1.05);
+}
+.card--popular:hover {
+  transform: scale(1.15);
 }
 .card--popular .card__header::before {
   content: url("../images/popular.svg");
@@ -651,4 +666,15 @@ a {
   .block-domain__prices {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
+}
+
+/* Plans Block */
+
+.block__plan .grid {
+  gap: 8rem 4rem;
+}
+
+.block .card {
+  max-width: 500px;
+  margin: 0 auto;
 }
